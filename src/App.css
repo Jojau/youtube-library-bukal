@@ -1,0 +1,14 @@
+.App{
+  margin: 5%;
+}
+
+h1{
+  text-align: center;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}

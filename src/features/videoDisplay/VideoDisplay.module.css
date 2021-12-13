@@ -1,0 +1,22 @@
+.videoDisplay{
+    width: 50%;
+    min-width: 300px;
+
+    padding: 25px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.videoContainer{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.videoContainer>iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

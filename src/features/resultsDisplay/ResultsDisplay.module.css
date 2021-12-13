@@ -1,0 +1,37 @@
+.list{
+    width: 50%;
+    min-width: 300px;
+
+    padding: 25px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.list>*{
+    margin: 25px 10px;
+}
+
+.videoCard{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    margin: 25px 10px;
+    padding: 10px;
+
+    border: 1px solid black;
+}
+.videoCard>*{
+    margin: 0 5px;
+}
+.videoCard .add{
+    color: white;
+    background-color: blue;
+
+    font-weight: bold;
+
+    border: none;
+
+    height: 25px;
+    width: 25px;
+}
