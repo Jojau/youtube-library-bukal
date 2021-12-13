@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { RootState, AppThunk } from '../../app/store';
-import { Resultat, ResultatItem } from '../searchBar/searchBarSlice';
+import { RootState } from '../../app/store';
+import { ResultatItem } from '../searchBar/searchBarSlice';
 
 /**
  * Types et State

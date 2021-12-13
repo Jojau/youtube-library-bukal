@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectVideos, addVideo, addVideoToUser } from '../list/listSlice';
+import { addVideoToUser } from '../list/listSlice';
 import { selectSearchBarState } from '../searchBar/searchBarSlice';
 import styles from './ResultsDisplay.module.css';
 
@@ -8,8 +8,6 @@ export function ResultsDisplay() {
 
     const searchState = useSelector(selectSearchBarState);
     const dispatch = useDispatch();
-
-    const videos = useSelector(selectVideos);
 
     const displayNone = {
         display: 'none'

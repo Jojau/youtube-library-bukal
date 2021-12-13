@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { SearchBar } from '../searchBar/SearchBar';
 import styles from './List.module.css';
-import { chooseVideo, deleteVideo, fetchVideos, removeVideoFromUser, selectVideos } from './listSlice';
+import { chooseVideo, fetchVideos, removeVideoFromUser, selectVideos } from './listSlice';
 
 export function List() {
 

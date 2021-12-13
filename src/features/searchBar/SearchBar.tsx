@@ -1,6 +1,5 @@
-import React, { SyntheticEvent, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styles from './SearchBar.module.css';
 import { fetchResults, selectSearchBarState } from './searchBarSlice';
 
 export function SearchBar() {
@@ -13,9 +12,6 @@ export function SearchBar() {
     useEffect(() => {
         setQuery(searchState.query);
     },[searchState])
-
-    // Ca marche pas et ça me saoule, j'arrive pas à faire le lien entre mon query "local" et le query du searchState
-
 
     return (
         <div>

@@ -1,7 +1,10 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { RootState, AppThunk } from '../../app/store';
+import { RootState } from '../../app/store';
 
+/**
+ * Types et State
+ */
 export interface Resultat {
     "kind": "youtube#searchListResponse",
     "etag": string,
@@ -53,11 +56,9 @@ const initialState: SearchBarState = {
   results: null,
 };
 
-// The function below is called a thunk and allows us to perform async logic. It
-// can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
-// will call the thunk with the `dispatch` function as the first argument. Async
-// code can then be executed and other actions can be dispatched. Thunks are
-// typically used to make async requests.
+/**
+ * API Youtube
+ */
 export const fetchResults = createAsyncThunk(
     'searchBar/fetchResults',
     async (query: string) => {
@@ -70,6 +71,9 @@ export const fetchResults = createAsyncThunk(
     }
 );
 
+/**
+ * Reducer et actions
+ */
 export const searchBarSlice = createSlice({
   name: 'searchBar',
   initialState,
@@ -96,8 +100,6 @@ export const searchBarSlice = createSlice({
         })
   },
 });
-
-// export const { increment, decrement, incrementByAmount } = searchBarSlice.actions;
 
 export const selectSearchBarState = (state: RootState) => state.searchBar;
 
